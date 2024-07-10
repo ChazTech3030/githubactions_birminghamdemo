@@ -4,13 +4,13 @@ on: workflow_dispatch
 jobs:
   artifact-creation:
     runs-on: ubuntu-latest
-      steps:
-      - name: Create and edit file
-        run: |
-          touch "my_artifact_file"
-          echo "some data in the file" > my_artifact_file
+    steps:
+    - name: Create and edit file
+      run: |
+        touch "my_artifact_file"
+        echo "some data in the file" > my_artifact_file
   artifact-uploading:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       needs: [artifact-creation]
       - name: Upload artifact
