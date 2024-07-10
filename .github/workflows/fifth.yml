@@ -13,6 +13,8 @@ jobs:
     needs: [artifact-creation]
     runs-on: ubuntu-latest
     steps:
+      - name: echo pwd
+        run: pwd
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
