@@ -1,5 +1,5 @@
 name: third workflow demo
-on: [workflow_dispatch, push]
+on: workflow_dispatch
 jobs:
   code-checkout:
     runs-on: ubuntu-latest

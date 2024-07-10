@@ -1,5 +1,5 @@
 name: second workflow demo
-on: push
+on: workflow_dispatch
 jobs:
   deploy:
     runs-on: ubuntu-latest
