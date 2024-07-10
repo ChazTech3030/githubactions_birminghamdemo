@@ -10,9 +10,9 @@ jobs:
         touch "my_artifact_file"
         echo "some data in the file" > my_artifact_file
   artifact-uploading:
+    needs: [artifact-creation]
     runs-on: ubuntu-latest
     steps:
-      needs: [artifact-creation]
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
